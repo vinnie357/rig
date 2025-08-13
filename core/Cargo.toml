@@ -1,0 +1,34 @@
+[package]
+name = "rig-core"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+repository.workspace = true
+rust-version.workspace = true
+description = "Core library for Rig CLI - authentication, HTTP client, and business logic"
+
+[dependencies]
+# Workspace dependencies
+reqwest.workspace = true
+tokio.workspace = true
+tokio-tungstenite.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+anyhow.workspace = true
+thiserror.workspace = true
+tracing.workspace = true
+config.workspace = true
+dirs.workspace = true
+keyring.workspace = true
+url.workspace = true
+uuid.workspace = true
+chrono.workspace = true
+
+# Local workspace crates
+rig-utils = { path = "../utils" }
+
+[dev-dependencies]
+mockall.workspace = true
+tempfile.workspace = true
+tokio-test.workspace = true

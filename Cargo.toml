@@ -1,0 +1,56 @@
+[workspace]
+resolver = "2"
+members = [
+    "cli",
+    "core",
+    "utils"
+]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2021"
+authors = ["Rig Team <team@rig.dev>"]
+license = "MIT OR Apache-2.0"
+repository = "https://github.com/max-platform/rig"
+rust-version = "1.70"
+
+[workspace.dependencies]
+# CLI Framework
+clap = { version = "4.4", features = ["derive", "env", "unicode", "wrap_help"] }
+
+# HTTP Client
+reqwest = { version = "0.11", features = ["json", "native-tls", "stream"] }
+
+# Serialization
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+
+# Async Runtime
+tokio = { version = "1.0", features = ["full"] }
+tokio-tungstenite = { version = "0.21", features = ["native-tls"] }
+
+# Error Handling
+anyhow = "1.0"
+thiserror = "1.0"
+
+# Logging
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter", "json"] }
+
+# Configuration
+config = "0.14"
+dirs = "5.0"
+
+# Security
+keyring = "2.0"
+
+# Utilities
+url = "2.4"
+uuid = { version = "1.0", features = ["v4", "serde"] }
+chrono = { version = "0.4", features = ["serde"] }
+
+# Development Dependencies
+mockall = "0.11"
+tempfile = "3.8"
+criterion = "0.5"
+tokio-test = "0.4"

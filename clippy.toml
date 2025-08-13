@@ -1,0 +1,13 @@
+# Clippy configuration for Rig CLI
+# Deny warnings to maintain high code quality
+msrv = "1.70"
+
+# Allow some complexity for CLI handling
+cognitive-complexity-threshold = 15
+too-many-arguments-threshold = 8
+
+# String literal handling
+max-suggested-slice-pattern-length = 3
+
+# Performance lints
+enum-variant-size-threshold = 200
